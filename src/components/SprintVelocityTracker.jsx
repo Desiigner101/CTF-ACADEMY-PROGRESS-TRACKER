@@ -17,12 +17,12 @@ const SprintVelocityTracker = () => {
       tasks: [
         { name: 'Project Setup (GITHUB)', points: 1, completed: true },
         { name: 'Setting Up Database (User Models)', points: 8, completed: true },
-        { name: 'Implement User Registration (Part 1/2)', points: 2.5, completed: true },
-        { name: 'Add User Role (Part 1/2)', points: 2.5, completed: true },
-        { name: 'Implement Login', points: 2.5, completed: true },
+        { name: 'Implement User Registration (Part 1/2)', points: 3, completed: true },
+        { name: 'Add User Role (Part 1/2)', points: 3, completed: true },
+        { name: 'Implement Login', points: 3, completed: true },
         { name: 'User Logout Functionality', points: 1, completed: true },
         { name: 'Implement Persistent Screen Navigation', points: 3, completed: true },
-        { name: 'Session Handling [Tokens]', points: 2.5, completed: true }
+        { name: 'Session Handling [Tokens]', points: 3, completed: true }
       ]
     },
     {
@@ -35,10 +35,10 @@ const SprintVelocityTracker = () => {
       totalTasks: 43,
       completedTasks: 4,
       tasks: [
-        { name: 'Implement User Login (Part 2/2)', points: 2.5, completed: true },
-        { name: 'Implement User Registration (Part 2/2)', points: 2.5, completed: true },
-        { name: 'Add User Role (Part 2/2)', points: 2.5, completed: true },
-        { name: 'Session Handling [Tokens] (Part 2/2)', points: 2.5, completed: true },
+        { name: 'Implement User Login (Part 2/2)', points: 2, completed: true },
+        { name: 'Implement User Registration (Part 2/2)', points: 2, completed: true },
+        { name: 'Add User Role (Part 2/2)', points: 2, completed: true },
+        { name: 'Session Handling [Tokens] (Part 2/2)', points: 2, completed: true },
         { name: 'Implement navigation bar layout', points: 1, completed: false },
         { name: 'Implement footer layout', points: 1, completed: false },
         { name: 'Add role-based navigation items', points: 1, completed: false },
