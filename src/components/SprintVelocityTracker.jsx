@@ -30,10 +30,10 @@ const SprintVelocityTracker = () => {
       name: 'Sprint 2',
       date: 'Oct 6, 2025',
       totalPoints: 49,
-      completed: 10,
-      pending: 39,
+      completed: 49,
+      pending: 0,
       totalTasks: 43,
-      completedTasks: 4,
+      completedTasks: 43,
       tasks: [
         { name: 'Implement User Login (Part 2/2)', points: 2, completed: true },
         { name: 'Implement User Registration (Part 2/2)', points: 2, completed: true },
