@@ -82,10 +82,10 @@ const SprintVelocityTracker = () => {
       name: 'Sprint 3',
       date: 'Oct 20, 2025',
       totalPoints: 29,
-      completed: 16,
-      pending: 13,
+      completed: 17,
+      pending: 12,
       totalTasks: 17,
-      completedTasks: 12,
+      completedTasks: 13,
       tasks: [
         { name: 'Api Testing Via Postman', points: 1, completed: true },
         { name: 'Add Security Measures (Input Sanitization)', points: 1, completed: true },
@@ -99,7 +99,7 @@ const SprintVelocityTracker = () => {
         { name: 'Challenge Descriptions', points: 1, completed: true },
         { name: 'Difficulty Labels', points: 1, completed: true },
         { name: 'Add Scoring System', points: 2, completed: false },
-        { name: 'Search Feature For Challenges', points: 1, completed: false },
+        { name: 'Search Feature For Challenges', points: 1, completed: true },
         { name: 'Leaderboard System', points: 2, completed: true },
         { name: 'Show Completed Challenges', points: 1, completed: true },
         { name: 'Show Incomplete Challenges', points: 1, completed: true },
@@ -116,7 +116,9 @@ const SprintVelocityTracker = () => {
 
   const avgVelocity = (sprintData.reduce((sum, s) => sum + s.completed, 0) / sprintData.length).toFixed(2);
   const totalCompleted = sprintData.reduce((sum, s) => sum + s.completed, 0);
-  const sprint2Progress = ((sprintData[1].completed / sprintData[1].totalPoints) * 100).toFixed(1);
+  const sprint2And3TotalPoints = sprintData[1].totalPoints + sprintData[2].totalPoints;
+  const sprint2And3Completed = sprintData[1].completed + sprintData[2].completed;
+  const sprint2And3Progress = ((sprint2And3Completed / sprint2And3TotalPoints) * 100).toFixed(1);
 
   const toggleTasks = (sprintId) => {
     setExpandedSprints(prev => ({
@@ -144,9 +146,9 @@ const SprintVelocityTracker = () => {
             <div className="text-sm opacity-80">Story Points</div>
           </div>
           <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-6 rounded-2xl shadow-lg hover:-translate-y-1 transition-transform">
-            <h3 className="text-xs uppercase tracking-wider opacity-90 mb-2">Sprint 2 Progress</h3>
-            <div className="text-4xl font-bold mb-1">{sprint2Progress}%</div>
-            <div className="text-sm opacity-80">Completion Rate</div>
+            <h3 className="text-xs uppercase tracking-wider opacity-90 mb-2">Sprint 2 & 3 Progress</h3>
+            <div className="text-4xl font-bold mb-1">{sprint2And3Progress}%</div>
+            <div className="text-sm opacity-80">Combined Completion Rate</div>
           </div>
         </div>
 
