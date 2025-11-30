@@ -76,34 +76,76 @@ const SprintVelocityTracker = () => {
         { name: 'Implement Profile Page layout', points: 1, completed: true }
       ]
     },
-
     {
       id: 'sprint3',
       name: 'Sprint 3',
       date: 'Oct 20, 2025',
       totalPoints: 29,
-      completed: 17,
-      pending: 12,
+      completed: 29,
+      pending: 0,
       totalTasks: 17,
-      completedTasks: 13,
+      completedTasks: 17,
       tasks: [
         { name: 'Api Testing Via Postman', points: 1, completed: true },
         { name: 'Add Security Measures (Input Sanitization)', points: 1, completed: true },
-        { name: 'Finalization of Backend', points: 3, completed: false },
+        { name: 'Finalization of Backend', points: 3, completed: true },
         { name: 'Apply Global Look & Feel', points: 2, completed: true },
         { name: 'Perform frontend testing', points: 1, completed: true },
         { name: 'Add loading indicators and error messages', points: 1, completed: true },
         { name: 'Leaderboards Page', points: 1, completed: true },
         { name: 'FInalization of Frontend', points: 3, completed: true },
-        { name: '10 - 15 Core Challenges', points: 5, completed: false },
+        { name: '10 - 15 Core Challenges', points: 5, completed: true },
         { name: 'Challenge Descriptions', points: 1, completed: true },
         { name: 'Difficulty Labels', points: 1, completed: true },
-        { name: 'Add Scoring System', points: 2, completed: false },
+        { name: 'Add Scoring System', points: 2, completed: true },
         { name: 'Search Feature For Challenges', points: 1, completed: true },
         { name: 'Leaderboard System', points: 2, completed: true },
         { name: 'Show Completed Challenges', points: 1, completed: true },
         { name: 'Show Incomplete Challenges', points: 1, completed: true },
-        { name: 'Favorites Feature', points: 2, completed: false },
+        { name: 'Favorites Feature', points: 2, completed: true },
+      ]
+    },
+    {
+      id: 'sprint4',
+      name: 'Sprint 4',
+      date: 'Nov 3, 2025',
+      totalPoints: 26,
+      completed: 26,
+      pending: 0,
+      totalTasks: 12,
+      completedTasks: 12,
+      tasks: [
+        { name: 'Core Challenges Finishing Steps', points: 5, completed: true },
+        { name: 'CTF Story Points', points: 3, completed: true },
+        { name: 'Completed Core Problems', points: 3, completed: true },
+        { name: 'Add Scores Functionality', points: 2, completed: true },
+        { name: 'Search Feature For Challenges', points: 1, completed: true },
+        { name: 'Favorites Feature', points: 2, completed: true },
+        { name: 'UI & Frontend Performance Optimization', points: 2, completed: true },
+        { name: 'CTF Chatbot API Integration', points: 1, completed: true },
+        { name: 'Backend Performance Optimization', points: 2, completed: true },
+        { name: 'Finalization of Backend', points: 2, completed: true },
+        { name: 'Torture Testings', points: 1, completed: true },
+        { name: 'Admin Page Implementation', points: 2, completed: true }
+      ]
+    },
+    {
+      id: 'sprint5',
+      name: 'Sprint 5',
+      date: 'Nov 17, 2025',
+      totalPoints: 13,
+      completed: 13,
+      pending: 0,
+      totalTasks: 7,
+      completedTasks: 7,
+      tasks: [
+        { name: 'Core Challenges Optimization', points: 3, completed: true },
+        { name: 'Core Challenges Testings', points: 3, completed: true },
+        { name: 'Torture Testings', points: 1, completed: true },
+        { name: 'Frontend Optimizations', points: 2, completed: true },
+        { name: 'Torture Testings', points: 1, completed: true },
+        { name: 'Backend Optimizations', points: 2, completed: true },
+        { name: 'Admin Page Finalization', points: 1, completed: true }
       ]
     }
   ];
@@ -116,9 +158,9 @@ const SprintVelocityTracker = () => {
 
   const avgVelocity = (sprintData.reduce((sum, s) => sum + s.completed, 0) / sprintData.length).toFixed(2);
   const totalCompleted = sprintData.reduce((sum, s) => sum + s.completed, 0);
-  const sprint2And3TotalPoints = sprintData[1].totalPoints + sprintData[2].totalPoints;
-  const sprint2And3Completed = sprintData[1].completed + sprintData[2].completed;
-  const sprint2And3Progress = ((sprint2And3Completed / sprint2And3TotalPoints) * 100).toFixed(1);
+  const sprint4And5TotalPoints = sprintData[3].totalPoints + sprintData[4].totalPoints;
+  const sprint4And5Completed = sprintData[3].completed + sprintData[4].completed;
+  const sprint4And5Progress = ((sprint4And5Completed / sprint4And5TotalPoints) * 100).toFixed(1);
 
   const toggleTasks = (sprintId) => {
     setExpandedSprints(prev => ({
@@ -146,8 +188,8 @@ const SprintVelocityTracker = () => {
             <div className="text-sm opacity-80">Story Points</div>
           </div>
           <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-6 rounded-2xl shadow-lg hover:-translate-y-1 transition-transform">
-            <h3 className="text-xs uppercase tracking-wider opacity-90 mb-2">Sprint 2 & 3 Progress</h3>
-            <div className="text-4xl font-bold mb-1">{sprint2And3Progress}%</div>
+            <h3 className="text-xs uppercase tracking-wider opacity-90 mb-2">Sprint 4 & 5 Progress</h3>
+            <div className="text-4xl font-bold mb-1">{sprint4And5Progress}%</div>
             <div className="text-sm opacity-80">Combined Completion Rate</div>
           </div>
         </div>
